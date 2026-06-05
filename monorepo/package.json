@@ -1,0 +1,25 @@
+{
+  "name": "trpc-nestjs-demo-monorepo",
+  "version": "1.0.0",
+  "description": "Auth/Catalog/Cart split into three NestJS services talking over tRPC",
+  "private": true,
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm -r --parallel run start:dev",
+    "start": "pnpm -r --parallel run start",
+    "test": "pnpm -r run test",
+    "lint": "pnpm -r run lint",
+    "format": "prettier --write \"packages/*/{src,test}/**/*.ts\"",
+    "format:check": "prettier --check \"packages/*/{src,test}/**/*.ts\""
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.4",
+    "@types/node": "22.19.19",
+    "eslint": "9.39.4",
+    "eslint-config-prettier": "10.1.8",
+    "globals": "^15.14.0",
+    "prettier": "3.8.3",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.60.1"
+  }
+}

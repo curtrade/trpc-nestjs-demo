@@ -1,0 +1,8 @@
+packages:
+  - 'packages/*'
+
+# pnpm blocks dependency build scripts by default; allow the ones our services
+# need so `pnpm run <script>` doesn't fail its pre-run check.
+allowBuilds:
+  '@nestjs/core': true
+  unrs-resolver: true
