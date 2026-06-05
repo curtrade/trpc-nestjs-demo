@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigifyModule } from '@itgorillaz/configify';
+import { CartModule } from './cart/cart.module';
 import { HealthController } from './health.controller';
 
 /**
@@ -11,7 +12,7 @@ import { HealthController } from './health.controller';
  * services that talk over tRPC instead.
  */
 @Module({
-  imports: [ConfigifyModule.forRootAsync()],
+  imports: [ConfigifyModule.forRootAsync(), CartModule],
   controllers: [HealthController],
 })
 export class AppModule {}
