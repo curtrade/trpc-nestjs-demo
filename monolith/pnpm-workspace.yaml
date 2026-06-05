@@ -1,3 +1,7 @@
+# Single-package project (not a workspace), but pnpm 11 reads settings from here.
+# Allow these dependencies to run their install/build scripts. pnpm blocks build
+# scripts by default; without this, `pnpm run <script>` fails its pre-run
+# dependency check with ERR_PNPM_IGNORED_BUILDS.
 allowBuilds:
-  '@nestjs/core': set this to true or false
-  unrs-resolver: set this to true or false
+  '@nestjs/core': true
+  unrs-resolver: true
