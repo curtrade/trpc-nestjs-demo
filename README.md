@@ -23,23 +23,3 @@ trpc-nestjs-demo/
 │       └── shared/    # Общие tRPC-контракты и типы
 └── docs/
 ```
-
-## Запуск
-
-### Монолит
-
-```bash
-cd monolith
-npm install
-npm run start:dev
-```
-
-### Монорепо
-
-```bash
-cd monorepo
-pnpm install
-pnpm run dev          # запускает все три сервиса
-# или
-bash demo-call.sh     # демонстрационные вызовы через tRPC
-```
