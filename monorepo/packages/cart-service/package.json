@@ -1,0 +1,59 @@
+{
+  "name": "@app/cart-service",
+  "version": "1.0.0",
+  "description": "Cart as the public REST edge, fanning out to Auth and Catalog over tRPC",
+  "private": true,
+  "scripts": {
+    "build": "nest build",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:prod": "node dist/main.js",
+    "lint": "eslint \"{src,test}/**/*.ts\"",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@app/auth-service": "workspace:*",
+    "@app/catalog-service": "workspace:*",
+    "@app/shared": "workspace:*",
+    "@itgorillaz/configify": "4.1.2",
+    "@nestjs/common": "11.1.24",
+    "@nestjs/core": "11.1.24",
+    "@nestjs/platform-express": "11.1.24",
+    "@trpc/client": "11.17.0",
+    "@trpc/server": "11.17.0",
+    "class-transformer": "0.5.1",
+    "class-validator": "0.15.1",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "11.0.21",
+    "@nestjs/schematics": "11.1.0",
+    "@nestjs/testing": "11.1.24",
+    "@types/express": "^5.0.0",
+    "@types/jest": "30.0.0",
+    "@types/node": "22.19.19",
+    "@types/supertest": "6.0.3",
+    "jest": "30.4.2",
+    "supertest": "7.1.4",
+    "ts-jest": "29.4.11",
+    "typescript": "5.9.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "^@app/shared$": "<rootDir>/../../shared/src/index.ts"
+    }
+  }
+}

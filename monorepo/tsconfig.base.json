@@ -10,7 +10,6 @@
     "resolveJsonModule": true,
     "target": "ES2022",
     "sourceMap": true,
-    "incremental": true,
     "skipLibCheck": true,
     "strict": true,
     "strictPropertyInitialization": false,
