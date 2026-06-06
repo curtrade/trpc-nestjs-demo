@@ -7,6 +7,7 @@
     "build": "pnpm -r build",
     "dev": "pnpm -r --parallel run start:dev",
     "start": "pnpm -r --parallel run start",
+    "demo": "./demo-call.sh",
     "test": "pnpm -r run test",
     "lint": "pnpm -r run lint",
     "format": "prettier --write \"packages/*/{src,test}/**/*.ts\"",
